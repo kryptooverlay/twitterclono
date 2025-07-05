@@ -20,8 +20,15 @@ type Firebase = {
 };
 
 function initialize(): Firebase {
+  // ✅ Durante el build en Vercel, devolvemos mocks vacíos
   if (typeof window === 'undefined') {
-    throw new Error('Firebase cannot be initialized on the server');
+    return {
+      firebaseApp: {} as FirebaseApp,
+      auth: {} as Auth,
+      storage: {} as FirebaseStorage,
+      firestore: {} as Firestore,
+      functions: {} as Functions
+    };
   }
 
   const firebaseApp = getApps().length
