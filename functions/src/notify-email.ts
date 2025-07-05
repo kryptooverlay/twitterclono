@@ -1,10 +1,12 @@
 import { createTransport } from 'nodemailer';
-import { firestore, functions, regionalFunctions } from './lib/utils';
+import * as functions from 'firebase-functions';
+import { firestore } from './lib/utils';
 import { EMAIL_API, EMAIL_API_PASSWORD, TARGET_EMAIL } from './lib/env';
 import type { Tweet, User } from './types';
 
-export const notifyEmail = regionalFunctions.firestore
-  .document('tweets/{tweetId}')
+export const notifyEmail = functions
+  .region('us-central1')
+  .firestore.document('tweets/{tweetId}')
   .onCreate(async (snapshot): Promise<void> => {
     functions.logger.info('Sending notification email.');
 

@@ -1,0 +1,426 @@
+'use strict';
+(() => {
+  var exports = {};
+  exports.id = 319;
+  exports.ids = [319];
+  exports.modules = {
+    /***/ 7768: /***/ (module, __webpack_exports__, __webpack_require__) => {
+      __webpack_require__.a(
+        module,
+        async (
+          __webpack_handle_async_dependencies__,
+          __webpack_async_result__
+        ) => {
+          try {
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+              /* harmony export */ default: () => /* binding */ Bookmarks
+              /* harmony export */
+            });
+            /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ =
+              __webpack_require__(997);
+            /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default =
+              /*#__PURE__*/ __webpack_require__.n(
+                react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__
+              );
+            /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1__ =
+              __webpack_require__(1853);
+            /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1___default =
+              /*#__PURE__*/ __webpack_require__.n(
+                next_router__WEBPACK_IMPORTED_MODULE_1__
+              );
+            /* harmony import */ var _components_layout_common_layout__WEBPACK_IMPORTED_MODULE_2__ =
+              __webpack_require__(3238);
+            /* harmony import */ var _components_layout_main_layout__WEBPACK_IMPORTED_MODULE_3__ =
+              __webpack_require__(4415);
+            /* harmony import */ var _components_common_seo__WEBPACK_IMPORTED_MODULE_4__ =
+              __webpack_require__(585);
+            /* harmony import */ var _components_home_main_header__WEBPACK_IMPORTED_MODULE_5__ =
+              __webpack_require__(3258);
+            /* harmony import */ var _components_home_main_container__WEBPACK_IMPORTED_MODULE_6__ =
+              __webpack_require__(722);
+            /* harmony import */ var _components_aside_aside_trends__WEBPACK_IMPORTED_MODULE_7__ =
+              __webpack_require__(254);
+            /* harmony import */ var _components_ui_button__WEBPACK_IMPORTED_MODULE_8__ =
+              __webpack_require__(4685);
+            /* harmony import */ var _components_ui_tooltip__WEBPACK_IMPORTED_MODULE_9__ =
+              __webpack_require__(3276);
+            /* harmony import */ var _components_ui_hero_icon__WEBPACK_IMPORTED_MODULE_10__ =
+              __webpack_require__(4266);
+            var __webpack_async_dependencies__ =
+              __webpack_handle_async_dependencies__([
+                _components_layout_common_layout__WEBPACK_IMPORTED_MODULE_2__,
+                _components_layout_main_layout__WEBPACK_IMPORTED_MODULE_3__,
+                _components_home_main_header__WEBPACK_IMPORTED_MODULE_5__,
+                _components_aside_aside_trends__WEBPACK_IMPORTED_MODULE_7__
+              ]);
+            [
+              _components_layout_common_layout__WEBPACK_IMPORTED_MODULE_2__,
+              _components_layout_main_layout__WEBPACK_IMPORTED_MODULE_3__,
+              _components_home_main_header__WEBPACK_IMPORTED_MODULE_5__,
+              _components_aside_aside_trends__WEBPACK_IMPORTED_MODULE_7__
+            ] = __webpack_async_dependencies__.then
+              ? (await __webpack_async_dependencies__)()
+              : __webpack_async_dependencies__;
+
+            function Bookmarks() {
+              const { back } = (0,
+              next_router__WEBPACK_IMPORTED_MODULE_1__.useRouter)();
+              return /*#__PURE__*/ (0,
+              react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(
+                _components_home_main_container__WEBPACK_IMPORTED_MODULE_6__ /* .MainContainer */.t,
+                {
+                  children: [
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(
+                      _components_common_seo__WEBPACK_IMPORTED_MODULE_4__ /* .SEO */.H,
+                      {
+                        title: 'Trends / Twitter'
+                      }
+                    ),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(
+                      _components_home_main_header__WEBPACK_IMPORTED_MODULE_5__ /* .MainHeader */.c,
+                      {
+                        useActionButton: true,
+                        title: 'Trends',
+                        action: back,
+                        children: /*#__PURE__*/ (0,
+                        react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(
+                          _components_ui_button__WEBPACK_IMPORTED_MODULE_8__ /* .Button */.z,
+                          {
+                            className:
+                              'dark-bg-tab group relative ml-auto cursor-not-allowed p-2 hover:bg-light-primary/10 active:bg-light-primary/20 dark:hover:bg-dark-primary/10 dark:active:bg-dark-primary/20',
+                            children: [
+                              /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(
+                                _components_ui_hero_icon__WEBPACK_IMPORTED_MODULE_10__ /* .HeroIcon */.e,
+                                {
+                                  className: 'h-5 w-5',
+                                  iconName: 'Cog8ToothIcon'
+                                }
+                              ),
+                              /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(
+                                _components_ui_tooltip__WEBPACK_IMPORTED_MODULE_9__ /* .ToolTip */.e,
+                                {
+                                  tip: 'Settings'
+                                }
+                              )
+                            ]
+                          }
+                        )
+                      }
+                    ),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(
+                      _components_aside_aside_trends__WEBPACK_IMPORTED_MODULE_7__ /* .AsideTrends */.j,
+                      {
+                        inTrendsPage: true
+                      }
+                    )
+                  ]
+                }
+              );
+            }
+            Bookmarks.getLayout = (page) =>
+              /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(
+                _components_layout_common_layout__WEBPACK_IMPORTED_MODULE_2__ /* .ProtectedLayout */.IP,
+                {
+                  children:
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(
+                      _components_layout_main_layout__WEBPACK_IMPORTED_MODULE_3__ /* .MainLayout */.Z,
+                      {
+                        children:
+                          /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(
+                            _components_layout_common_layout__WEBPACK_IMPORTED_MODULE_2__ /* .TrendsLayout */.OS,
+                            {
+                              children: page
+                            }
+                          )
+                      }
+                    )
+                }
+              );
+
+            __webpack_async_result__();
+          } catch (e) {
+            __webpack_async_result__(e);
+          }
+        }
+      );
+
+      /***/
+    },
+
+    /***/ 2135: /***/ (module) => {
+      module.exports = require('@heroicons/react/24/outline');
+
+      /***/
+    },
+
+    /***/ 8802: /***/ (module) => {
+      module.exports = require('@heroicons/react/24/solid');
+
+      /***/
+    },
+
+    /***/ 8103: /***/ (module) => {
+      module.exports = require('clsx');
+
+      /***/
+    },
+
+    /***/ 3280: /***/ (module) => {
+      module.exports = require('next/dist/shared/lib/app-router-context.js');
+
+      /***/
+    },
+
+    /***/ 2796: /***/ (module) => {
+      module.exports = require('next/dist/shared/lib/head-manager-context.js');
+
+      /***/
+    },
+
+    /***/ 4957: /***/ (module) => {
+      module.exports = require('next/dist/shared/lib/head.js');
+
+      /***/
+    },
+
+    /***/ 4014: /***/ (module) => {
+      module.exports = require('next/dist/shared/lib/i18n/normalize-locale-path.js');
+
+      /***/
+    },
+
+    /***/ 744: /***/ (module) => {
+      module.exports = require('next/dist/shared/lib/image-config-context.js');
+
+      /***/
+    },
+
+    /***/ 5843: /***/ (module) => {
+      module.exports = require('next/dist/shared/lib/image-config.js');
+
+      /***/
+    },
+
+    /***/ 8524: /***/ (module) => {
+      module.exports = require('next/dist/shared/lib/is-plain-object.js');
+
+      /***/
+    },
+
+    /***/ 8020: /***/ (module) => {
+      module.exports = require('next/dist/shared/lib/mitt.js');
+
+      /***/
+    },
+
+    /***/ 4406: /***/ (module) => {
+      module.exports = require('next/dist/shared/lib/page-path/denormalize-page-path.js');
+
+      /***/
+    },
+
+    /***/ 4964: /***/ (module) => {
+      module.exports = require('next/dist/shared/lib/router-context.js');
+
+      /***/
+    },
+
+    /***/ 1751: /***/ (module) => {
+      module.exports = require('next/dist/shared/lib/router/utils/add-path-prefix.js');
+
+      /***/
+    },
+
+    /***/ 6220: /***/ (module) => {
+      module.exports = require('next/dist/shared/lib/router/utils/compare-states.js');
+
+      /***/
+    },
+
+    /***/ 299: /***/ (module) => {
+      module.exports = require('next/dist/shared/lib/router/utils/format-next-pathname-info.js');
+
+      /***/
+    },
+
+    /***/ 3938: /***/ (module) => {
+      module.exports = require('next/dist/shared/lib/router/utils/format-url.js');
+
+      /***/
+    },
+
+    /***/ 9565: /***/ (module) => {
+      module.exports = require('next/dist/shared/lib/router/utils/get-asset-path-from-route.js');
+
+      /***/
+    },
+
+    /***/ 5789: /***/ (module) => {
+      module.exports = require('next/dist/shared/lib/router/utils/get-next-pathname-info.js');
+
+      /***/
+    },
+
+    /***/ 1897: /***/ (module) => {
+      module.exports = require('next/dist/shared/lib/router/utils/is-bot.js');
+
+      /***/
+    },
+
+    /***/ 1428: /***/ (module) => {
+      module.exports = require('next/dist/shared/lib/router/utils/is-dynamic.js');
+
+      /***/
+    },
+
+    /***/ 8854: /***/ (module) => {
+      module.exports = require('next/dist/shared/lib/router/utils/parse-path.js');
+
+      /***/
+    },
+
+    /***/ 1292: /***/ (module) => {
+      module.exports = require('next/dist/shared/lib/router/utils/parse-relative-url.js');
+
+      /***/
+    },
+
+    /***/ 4567: /***/ (module) => {
+      module.exports = require('next/dist/shared/lib/router/utils/path-has-prefix.js');
+
+      /***/
+    },
+
+    /***/ 979: /***/ (module) => {
+      module.exports = require('next/dist/shared/lib/router/utils/querystring.js');
+
+      /***/
+    },
+
+    /***/ 3297: /***/ (module) => {
+      module.exports = require('next/dist/shared/lib/router/utils/remove-trailing-slash.js');
+
+      /***/
+    },
+
+    /***/ 6052: /***/ (module) => {
+      module.exports = require('next/dist/shared/lib/router/utils/resolve-rewrites.js');
+
+      /***/
+    },
+
+    /***/ 4226: /***/ (module) => {
+      module.exports = require('next/dist/shared/lib/router/utils/route-matcher.js');
+
+      /***/
+    },
+
+    /***/ 5052: /***/ (module) => {
+      module.exports = require('next/dist/shared/lib/router/utils/route-regex.js');
+
+      /***/
+    },
+
+    /***/ 9232: /***/ (module) => {
+      module.exports = require('next/dist/shared/lib/utils.js');
+
+      /***/
+    },
+
+    /***/ 968: /***/ (module) => {
+      module.exports = require('next/head');
+
+      /***/
+    },
+
+    /***/ 1853: /***/ (module) => {
+      module.exports = require('next/router');
+
+      /***/
+    },
+
+    /***/ 6689: /***/ (module) => {
+      module.exports = require('react');
+
+      /***/
+    },
+
+    /***/ 649: /***/ (module) => {
+      module.exports = require('react-textarea-autosize');
+
+      /***/
+    },
+
+    /***/ 997: /***/ (module) => {
+      module.exports = require('react/jsx-runtime');
+
+      /***/
+    },
+
+    /***/ 1185: /***/ (module) => {
+      module.exports = import('@headlessui/react');
+
+      /***/
+    },
+
+    /***/ 3745: /***/ (module) => {
+      module.exports = import('firebase/app');
+
+      /***/
+    },
+
+    /***/ 401: /***/ (module) => {
+      module.exports = import('firebase/auth');
+
+      /***/
+    },
+
+    /***/ 1492: /***/ (module) => {
+      module.exports = import('firebase/firestore');
+
+      /***/
+    },
+
+    /***/ 8937: /***/ (module) => {
+      module.exports = import('firebase/functions');
+
+      /***/
+    },
+
+    /***/ 3392: /***/ (module) => {
+      module.exports = import('firebase/storage');
+
+      /***/
+    },
+
+    /***/ 6197: /***/ (module) => {
+      module.exports = import('framer-motion');
+
+      /***/
+    },
+
+    /***/ 6201: /***/ (module) => {
+      module.exports = import('react-hot-toast');
+
+      /***/
+    },
+
+    /***/ 5941: /***/ (module) => {
+      module.exports = import('swr');
+
+      /***/
+    }
+  };
+  // load runtime
+  var __webpack_require__ = require('../webpack-runtime.js');
+  __webpack_require__.C(exports);
+  var __webpack_exec__ = (moduleId) =>
+    __webpack_require__((__webpack_require__.s = moduleId));
+  var __webpack_exports__ = __webpack_require__.X(
+    0,
+    [675, 676, 63, 108, 655, 585, 246, 371],
+    () => __webpack_exec__(7768)
+  );
+  module.exports = __webpack_exports__;
+})();

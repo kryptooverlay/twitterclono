@@ -1,9 +1,11 @@
-import { functions, firestore, regionalFunctions } from './lib/utils';
+import * as functions from 'firebase-functions';
+import { firestore } from './lib/utils';
 import { tweetConverter, bookmarkConverter } from './types';
 import type { Tweet } from './types';
 
-export const normalizeStats = regionalFunctions.firestore
-  .document('tweets/{tweetId}')
+export const normalizeStats = functions
+  .region('us-central1')
+  .firestore.document('tweets/{tweetId}')
   .onDelete(async (snapshot): Promise<void> => {
     const tweetId = snapshot.id;
     const tweetData = snapshot.data() as Tweet;
