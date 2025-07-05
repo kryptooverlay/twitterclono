@@ -20,9 +20,9 @@ type Firebase = {
 };
 
 function initialize(): Firebase {
-  // ✅ SOLO inicializá si no está iniciado y estamos en navegador
-  if (typeof window === 'undefined')
-    throw new Error('Firebase only in browser');
+  if (typeof window === 'undefined') {
+    throw new Error('Firebase cannot be initialized on the server');
+  }
 
   const firebaseApp = getApps().length
     ? getApps()[0]
@@ -36,28 +36,18 @@ function initialize(): Firebase {
   return { firebaseApp, auth, firestore, storage, functions };
 }
 
-function connectToEmulator({
-  auth,
-  storage,
-  firestore,
-  functions,
-  firebaseApp
-}: Firebase): Firebase {
-  connectAuthEmulator(auth, 'http://localhost:9099', { disableWarnings: true });
-  connectStorageEmulator(storage, 'localhost', 9199);
-  connectFirestoreEmulator(firestore, 'localhost', 8080);
-  connectFunctionsEmulator(functions, 'localhost', 5001);
-
-  return { firebaseApp, auth, firestore, storage, functions };
-}
-
-export function getFirebase(): Firebase {
-  const firebase = initialize();
-
-  if (isUsingEmulator) return connectToEmulator(firebase);
+function connectToEmulator(firebase: Firebase): Firebase {
+  connectAuthEmulator(firebase.auth, 'http://localhost:9099', {
+    disableWarnings: true
+  });
+  connectStorageEmulator(firebase.storage, 'localhost', 9199);
+  connectFirestoreEmulator(firebase.firestore, 'localhost', 8080);
+  connectFunctionsEmulator(firebase.functions, 'localhost', 5001);
 
   return firebase;
 }
 
-// Export destructurado
-export const { firestore: db, auth, storage } = getFirebase();
+export function getFirebaseClient(): Firebase {
+  const firebase = initialize();
+  return isUsingEmulator ? connectToEmulator(firebase) : firebase;
+}
