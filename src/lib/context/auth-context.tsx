@@ -12,7 +12,8 @@ import {
   onSnapshot,
   serverTimestamp
 } from 'firebase/firestore';
-import { auth } from '@lib/firebase/app';
+import { getFirebaseClient } from '@lib/firebase/app';
+const { auth } = getFirebaseClient();
 import {
   usersCollection,
   userStatsCollection,
