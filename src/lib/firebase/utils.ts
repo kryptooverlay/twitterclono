@@ -15,7 +15,9 @@ import {
   getCountFromServer
 } from 'firebase/firestore';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
-import { db, storage } from './app';
+import { getFirebaseClient } from './app';
+const { firestore: db, storage } = getFirebaseClient();
+
 import {
   usersCollection,
   tweetsCollection,
